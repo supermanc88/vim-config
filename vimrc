@@ -1,7 +1,12 @@
-" windows上的配置
+" /**
+" * \file vimrc
+" * \brief 
+" * \author Heming Cheng, supermanc88@gmail.com
+" * \version 0.0.1
+" * \update 2021-05-14
+" */
 
 " [ 基本配置=============================================================
-
 set nocompatible              " be iMproved, required
 " filetype off                  " required
 filetype plugin on						"	preservim/nerdcommenter 需要开启
@@ -47,11 +52,11 @@ if has("win32")
 	source $VIMRUNTIME/menu.vim
 endif		
 
-
 " 启动最大化
 autocmd GUIEnter * simalt ~x
-
 " 基本配置============================================================= ]
+
+
 
 
 " vim-plug: Vim plugin manager
@@ -162,6 +167,9 @@ call plug#end()
 " 前缀键默认为“\”。现修改为空格
 let mapleader = "\<space>"
 
+
+
+
 " [ cormacrelf/vim-colors-github 主题插件 配置=============================================================
 
 " cormacrelf/vim-colors-github 主题插件 配置
@@ -175,10 +183,16 @@ let mapleader = "\<space>"
 
 " cormacrelf/vim-colors-github 主题插件 配置============================================================= ]
 
+
+
+
 " [ jeaye/color_coded c类语法高亮 配置=============================================================
 " 需要本机安装lua，要和vim版本对应
 " 在windows版本上未编译成功
 " jeaye/color_coded c类语法高亮 配置============================================================= ]
+
+
+
 
 " [ neoclide/coc.nvim 补全插件 配置=============================================================
 " 使用clangd官方提供的插件
@@ -314,6 +328,9 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " neoclide/coc.nvim 补全插件 配置============================================================= ]
 
+
+
+
 " [ 主题及airline配置=============================================================
 
 " colorscheme molokai
@@ -339,6 +356,8 @@ let g:airline_theme='powerlineish'
 " 主题及airline配置============================================================= ]
 
 
+
+
 " jonathanfilip/vim-lucius 主题插件 配置
 " LuciusBlackHighContrast
 
@@ -357,6 +376,8 @@ let g:airline_theme='powerlineish'
 " luochen1990/rainbow 彩虹括号插件 配置
 " 自动启用
 let g:rainbow_active = 1
+
+
 
 
 " [ dense-analysis/ale 动态检查工具 配置=============================================================
@@ -502,6 +523,7 @@ noremap <leader>gs : call GetCcOptions()<CR>
 
 
 
+
 " [ scrooloose/nerdcommenter 注释插件 配置=============================================================
 
 " scrooloose/nerdcommenter 注释插件 配置
@@ -557,6 +579,7 @@ let g:NERDToggleCheckAllLines = 1
 
 
 
+
 " [ babaybus/DoxygenToolkit.vim 函数注释插件 配置=============================================================
 let g:DoxygenToolkit_briefTag_funcName = "yes"
 " for C++ style, change the '@' to '\'
@@ -582,12 +605,14 @@ let g:DoxygenToolkit_compactDoc = "yes"
 
 
 
+
 " [ preservim/nerdtree 目录树插件 配置=============================================================
 noremap <silent> <F5> :NERDTreeToggle<CR>            " F5 开关目录树
 " open NERDTree automatically when Vim starts
 " Start NERDTree and put the cursor back in the other window.
 autocmd VimEnter * NERDTree | wincmd p
 " preservim/nerdtree 目录树插件 配置============================================================= ]
+
 
 
 
@@ -642,6 +667,7 @@ nnoremap <c-j> :YcmCompleter GoToDefinitionElseDeclaration<CR>|
 " YouCompleteMe 配置============================================================= ]
 
 
+
  
 " source $VIMRUNTIME/cscope_maps.vim
 " 
@@ -688,6 +714,7 @@ nnoremap <c-j> :YcmCompleter GoToDefinitionElseDeclaration<CR>|
 " let CtagsCscope_Auto_Map = 1
 " let GtagsCscope_Quiet = 1
 " " Gtags 配置========================================================
+
 
 
 
@@ -773,6 +800,8 @@ noremap <F2> :LeaderfFunction!<cr>
 " Yggdroot/LeaderF 模糊搜索插件 配置============================================================= ]
 
 
+
+
 " [ vim-airline/vim-airline 状态栏插件 配置=============================================================
 " vim-airline/vim-airline 状态栏插件 配置
 " 默认只有下面的状态栏
@@ -812,6 +841,8 @@ let g:airline_powerline_fonts = 1
 " vim-airline/vim-airline 状态栏插件 配置============================================================= ]
 
 
+
+
 " [ 自定义功能配置=============================================================
 
 " 打开自己写的常用的vim快捷键
@@ -836,6 +867,9 @@ noremap <F1> :call OpenMyHelpTxtToggle()<cr>
 
 " 自定义功能配置============================================================= ]
 
+
+
+
 " ====================================================================
 " 下载字体
 " https://github.com/adobe-fonts/source-code-pro/releases
@@ -851,6 +885,7 @@ if has("gui_running")
     endif
 endif
 " " ====================================================================
+
 
 
 
