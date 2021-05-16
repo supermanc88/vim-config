@@ -195,7 +195,10 @@ let mapleader = "\<space>"
 
 
 " [ neoclide/coc.nvim 补全插件 配置=============================================================
+" 需要安装nodejs
 " 使用clangd官方提供的插件
+" :CocConfig创建一个空的json
+" clangd 最好在环境变量中
 " :CocInstall coc-clangd
 " Note: If you've configured clangd as a languageServer in coc-settings.json, you should remove it to avoid running clangd twice!
 " 下载 https://github.com/rizsotto/Bear 用来生成compile_commands.json文件
