@@ -3,7 +3,7 @@
 " * \brief 
 " * \author Heming Cheng, supermanc88@gmail.com
 " * \version 0.0.1
-" * \update 2021-05-14
+" * \update 2021-05-17
 " */
 
 " [ 基本配置=============================================================
@@ -178,6 +178,7 @@ let mapleader = "\<space>"
 
 
 " [ jackguo380/vim-lsp-cxx-highlight 语法高亮 配置=============================================================
+" 需要coc.nvim 和 coc-clangd两个插件
 " :CocConfig 添加以下内容：
 " "clangd.semanticHighlighting": true,
 let g:lsp_cxx_hl_use_text_props = 1
