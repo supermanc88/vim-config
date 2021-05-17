@@ -157,7 +157,16 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " sheerun/vim-polyglot 各种语言高亮
 " 经测试这个高亮比较好用
 " https://github.com/sheerun/vim-polyglot
-Plug 'sheerun/vim-polyglot'
+" Plug 'sheerun/vim-polyglot'
+
+" jaxbot/semantic-highlight.vim 语法高亮
+" 需要调用命令开启颜色，但是很好看
+" https://github.com/jaxbot/semantic-highlight.vim
+Plug 'jaxbot/semantic-highlight.vim'
+
+" jackguo380/vim-lsp-cxx-highlight 语法高亮
+" https://github.com/jackguo380/vim-lsp-cxx-highlight
+Plug 'jackguo380/vim-lsp-cxx-highlight'
 
 call plug#end()
 
@@ -168,6 +177,11 @@ call plug#end()
 let mapleader = "\<space>"
 
 
+" [ jackguo380/vim-lsp-cxx-highlight 语法高亮 配置=============================================================
+" :CocConfig 添加以下内容：
+" "clangd.semanticHighlighting": true,
+let g:lsp_cxx_hl_use_text_props = 1
+" jackguo380/vim-lsp-cxx-highlight 语法高亮 配置============================================================= ]
 
 
 " [ cormacrelf/vim-colors-github 主题插件 配置=============================================================
@@ -192,6 +206,10 @@ let mapleader = "\<space>"
 " jeaye/color_coded c类语法高亮 配置============================================================= ]
 
 
+" [ jaxbot/semantic-highlight.vim 语法高亮 配置=============================================================
+" In a file, run :SemanticHighlight to convert variables into colors. Run :SemanticHighlightRevert to revert.
+nnoremap <leader>st :SemanticHighlightToggle<cr>
+" jaxbot/semantic-highlight.vim语法高亮 配置============================================================= ]
 
 
 " [ neoclide/coc.nvim 补全插件 配置=============================================================
@@ -204,6 +222,7 @@ let mapleader = "\<space>"
 " 下载 https://github.com/rizsotto/Bear 用来生成compile_commands.json文件
 " 目前只支持Linux
 " 如果不用其它工具生成compile_command.json文件，可以在当前目录下使用compile_flags.txt
+" 其中的内容就是gcc 的编译参数
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
@@ -868,6 +887,10 @@ endfunction
 " noremap <F1> :call OpenMyHelpTxt()<cr><C-W><S-L><CR>:vertical resize -20<CR>
 noremap <F1> :call OpenMyHelpTxtToggle()<cr>
 
+
+" 缓冲切换快捷键映射
+noremap <F3> :bn<CR>
+noremap <F4> :bp<CR>
 " 自定义功能配置============================================================= ]
 
 
