@@ -169,6 +169,10 @@ Plug 'jaxbot/semantic-highlight.vim'
 " https://github.com/jackguo380/vim-lsp-cxx-highlight
 Plug 'jackguo380/vim-lsp-cxx-highlight'
 
+" yianwillis/vimcdoc 中文帮助
+" https://github.com/yianwillis/vimcdoc
+Plug 'yianwillis/vimcdoc'
+
 call plug#end()
 
 " 添加 http://github.com/tpope/vim-unimpaired 插件 用来补充一些映射
