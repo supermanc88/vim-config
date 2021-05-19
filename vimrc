@@ -3,7 +3,7 @@
 " * \brief 
 " * \author Heming Cheng, supermanc88@gmail.com
 " * \version 0.0.1
-" * \update 2021-05-17
+" * \update 2021-05-18
 " */
 
 " [ 基本配置=============================================================
@@ -16,6 +16,7 @@ set tabstop=4                 " 设置制表符长度
 set softtabstop=4             " 设置软制表符
 set shiftwidth=4              " 缩进长度
 set number                    " 打开行号
+set relativenumber			  " 设置相对行号
 syntax enable				  "开启语法高亮功能
 syntax on
 set t_Co=256				  "指定配色方案为256色
@@ -74,7 +75,7 @@ call plug#begin('$VIMRUNTIME/../plugged')
 " nanotech/jellybeans.vim 主题插件
 " 此插件优点是可以重载自定义的高亮
 " https://github.com/nanotech/jellybeans.vim
-Plug 'nanotech/jellybeans.vim'
+" Plug 'nanotech/jellybeans.vim'
 
 " jonathanfilip/vim-lucius 主题插件
 " https://github.com/jonathanfilip/vim-lucius
@@ -181,7 +182,16 @@ let mapleader = "\<space>"
 " 需要coc.nvim 和 coc-clangd两个插件
 " :CocConfig 添加以下内容：
 " "clangd.semanticHighlighting": true,
-let g:lsp_cxx_hl_use_text_props = 1
+" let g:lsp_cxx_hl_use_text_props = 1
+
+" highlight LspCxxHlSymVariable ctermfg=Blue guifg=Blue gui=bold
+hi clear LspCxxHlSymVariable
+hi clear LspCxxHlSymParameter
+hi default link LspCxxHlSymVariable QuickFixLine
+hi default link LspCxxHlSymParameter Keyword
+" highlight LspCxxHlSymLocalVariable ctermfg=Blue guifg=Blue gui=bold
+hi default link LspCxxHlSymLocalVariable Debug
+" hi default link LspCxxHlSymFunction QuickFixLine
 " jackguo380/vim-lsp-cxx-highlight 语法高亮 配置============================================================= ]
 
 
